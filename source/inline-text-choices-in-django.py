@@ -12,10 +12,7 @@ class Maker(models.Model):
     country = models.CharField(max_length=30)
 
     def __str__(self) -> str:
-        return "Car maker, name = {}, country = {}".format(
-            self.name,
-            self.country,
-        )
+        return f"Car maker, name = {self.name}, country = {self.country}"
 
 
 class Car(models.Model):
@@ -32,7 +29,4 @@ class Car(models.Model):
     color = models.TextField(choices=Color.choices)
 
     def __str__(self) -> str:
-        return "Car, maker = {}, color = {}".format(
-            self.maker,
-            self.color,
-        )
+        return f"Car, maker = {self.maker}, color = {self.color}"
